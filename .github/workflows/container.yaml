@@ -5,7 +5,8 @@ on:
     branches:
       - master
     paths:
-      - '/container/**'
+      - 'container/**'
+
 defaults:
   run:
     working-directory: /container
