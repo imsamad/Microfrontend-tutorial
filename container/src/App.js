@@ -1,11 +1,11 @@
 import React from 'react';
-import MarketingApp from './components/MarketingApp';
+// import MarketingApp from './components/MarketingApp';
 
 const App = () => {
   return (
     <div>
       <h2>Container!!!!!</h2>
-      <MarketingApp />
+      {/* <MarketingApp /> */}
     </div>
   );
 };

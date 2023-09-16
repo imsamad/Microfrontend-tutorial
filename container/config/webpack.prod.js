@@ -11,15 +11,15 @@ const prodConfig = {
     publicPath: '/container/latest',
     filename: '[name].[contenthash].js',
   },
-  plugins: [
-    new ModuleFederationPlugin({
-      name: 'container',
-      remotes: {
-        './MarketingApp': `marketing@${domain}/marketing/remoteEntry.js`,
-      },
-      shared: packageJson.dependencies,
-    }),
-  ],
+  // plugins: [
+  //   new ModuleFederationPlugin({
+  //     name: 'container',
+  //     remotes: {
+  //       './MarketingApp': `marketing@${domain}/marketing/remoteEntry.js`,
+  //     },
+  //     shared: packageJson.dependencies,
+  //   }),
+  // ],
 };
 
 module.exports = merge(commonConfig, prodConfig);
