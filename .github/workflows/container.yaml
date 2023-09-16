@@ -1,4 +1,4 @@
-name: deploy-container
+name: Deploy container to S3
 
 on:
   push:
@@ -15,11 +15,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y awscli
+
       - run: npm install --verbose
       - run: npm run build
 
-      - uses: chrislennon/action-aws-cli@v2
+      - uses: chrislennon/action-aws-cli@v1.1
       - run: aws s3 syn dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/container/latest
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
