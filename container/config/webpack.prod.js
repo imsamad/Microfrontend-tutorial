@@ -3,8 +3,8 @@ const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
-const domain = process.env.PRODUCTION_DOMAIN;
-console.log('domain ', domain);
+const domain =
+  `https://d2nu9s3360qazn.cloudfront.net` || process.env.PRODUCTION_DOMAIN;
 
 const prodConfig = {
   mode: 'production',
