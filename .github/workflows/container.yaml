@@ -24,6 +24,8 @@ jobs:
           sudo apt-get install -y awscli
 
       - run: npm install --verbose
+        env:
+          PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
       - run: npm run build
         env:
           PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
