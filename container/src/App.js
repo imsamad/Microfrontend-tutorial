@@ -20,6 +20,7 @@ const App = () => {
         <Header
           signedIn={isSignIn}
           onSignOut={() => {
+            //
             setIsSignIn(false);
           }}
         />
