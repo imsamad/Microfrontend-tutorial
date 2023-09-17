@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Switch, Route, Router } from 'react-router-dom';
 import {
   StylesProvider,
@@ -13,6 +13,7 @@ const generateClassName = createGenerateClassName({
 });
 
 export default ({ history }) => {
+  useEffect(() => {}, []);
   return (
     <StylesProvider generateClassName={generateClassName}>
       <Router history={history}>

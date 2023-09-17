@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { StylesProvider, createGenerateClassName } from '@material-ui/core';
 
@@ -14,6 +14,8 @@ const generateClassName = createGenerateClassName({
 
 const App = () => {
   const [isSignIn, setIsSignIn] = useState(false);
+  useEffect(() => {}, []);
+
   return (
     <StylesProvider generateClassName={generateClassName}>
       <BrowserRouter>

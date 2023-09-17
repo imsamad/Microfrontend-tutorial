@@ -14,6 +14,7 @@ const generateClassName = createGenerateClassName({
 });
 
 export default ({ history, onSignIn }) => {
+  useEffect(() => {}, []);
   return (
     <StylesProvider generateClassName={generateClassName}>
       <Router history={history}>
